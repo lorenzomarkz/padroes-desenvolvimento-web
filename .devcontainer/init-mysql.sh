@@ -35,7 +35,7 @@ COLLATE utf8mb4_unicode_ci;
 
 CREATE USER IF NOT EXISTS 'loremarks'@'%' IDENTIFIED BY 'marks123';
 
-GRANT ALL PRIVILEGES ON ecommerce.* TO 'marks';
+GRANT ALL PRIVILEGES ON ecommerce.* TO 'loremarks'@'%';
 
 FLUSH PRIVILEGES;
 EOF
