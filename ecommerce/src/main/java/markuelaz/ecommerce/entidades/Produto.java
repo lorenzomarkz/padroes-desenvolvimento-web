@@ -1,25 +1,34 @@
 package markuelaz.ecommerce.entidades;
 
+import java.math.BigDecimal;
+import java.time.LocalDate;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
-@Setter 
+@Setter
 
-public class Categoria {
+public class Produto {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    private Short id;
+    
+    private Integer id; 
 
     private String nome;
-
+   
     private String descricao;
 
+    private Short estoque;
 
-}
+    private BigDecimal preco;
+
+    @ManyToOne
+    private Categoria categoria;
+ }

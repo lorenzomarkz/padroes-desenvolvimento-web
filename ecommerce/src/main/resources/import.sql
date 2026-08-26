@@ -1,0 +1,2 @@
+ insert into Categoria (nome, descricao) values ('Informártica', 'Produtos de Informática');
+insert into produto (nome, descricao, preco, estoque, categoria_id) values ('Código Limpo', 'Livro do Autor RObert C. Martin', 100.90, 20, 2)
