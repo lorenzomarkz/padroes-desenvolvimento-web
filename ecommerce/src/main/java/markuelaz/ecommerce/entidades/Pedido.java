@@ -1,6 +1,7 @@
 package markuelaz.ecommerce.entidades;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -14,20 +15,18 @@ import lombok.Setter;
 @Getter
 @Setter
 
-public class Produto {
+public class Pedido {
     @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
-    
-    private Integer id; 
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
 
-    private String nome;
-   
-    private String descricao;
+    private LocalDateTime data;
 
-    private Short estoque;
+    private String status;
 
-    private BigDecimal preco;
+    private BigDecimal valorTotal;
 
     @ManyToOne
-    private Categoria categoria;
- }
+    private Cliente cliente;
+
+}
