@@ -3,12 +3,10 @@ package markuelaz.ecommerce.repositorios;
 import java.math.BigDecimal;
 import java.util.Optional;
 
-import org.aspectj.weaver.ast.Var;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import lombok.var;
 import markuelaz.ecommerce.entidades.Categoria;
 
 import markuelaz.ecommerce.entidades.Produto;
@@ -20,9 +18,9 @@ public class ProdutoRepositorioTests {
     private  CategoriaRepositorio categoriaRepositorio;
      
     @Autowired 
-    private ProdutoRepositorio prodRepositorio;
+    private ProdutoRepositorio produtoRepositorio;
     
-    @Test 
+    @Test
     public void deveSalvarUmProdutoNovo() {
 
         var produto = new Produto ();
