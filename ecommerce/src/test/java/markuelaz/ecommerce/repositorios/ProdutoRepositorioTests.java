@@ -1,5 +1,8 @@
 package markuelaz.ecommerce.repositorios;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
 import java.math.BigDecimal;
 import java.util.Optional;
 
@@ -31,5 +34,13 @@ public class ProdutoRepositorioTests {
 
 
         var categoria = categoriaRepositorio.findById(Short.parseShort("1")).orElseThrow();
+        produto.setCategoria(categoria);
+
+        System.out.println("ID Antes +" + produto.getId());
+        produtoRepositorio.save(produto);
+        System.out.println("ID Depois +" + produto.getId());
+
+        assertNotNull(produto.getId());
+        assertEquals(60roduto.getId());
     }
 }
