@@ -1,16 +1,13 @@
 package markuelaz.ecommerce.repositorios;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import java.math.BigDecimal;
-import java.util.Optional;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import markuelaz.ecommerce.entidades.Categoria;
 
 import markuelaz.ecommerce.entidades.Produto;
 
@@ -41,6 +38,5 @@ public class ProdutoRepositorioTests {
         System.out.println("ID Depois +" + produto.getId());
 
         assertNotNull(produto.getId());
-        assertEquals(60roduto.getId());
     }
 }
